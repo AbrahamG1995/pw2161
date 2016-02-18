@@ -1,0 +1,8 @@
+git init
+git config user.name Nombre
+git config user.email Correo
+Crean un archivo index.html (Vacio) y lo graban en la carpeta pw2161
+git add -A
+git commit -m "Primer Commit"
+git remote add origin https://github.com/AbrahamG1995/pw2161.git
+git push -u origin master
