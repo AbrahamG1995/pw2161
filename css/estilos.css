@@ -1,0 +1,19 @@
+/*estiquetas         <---Orden Alfabético
+identificadores
+clases
+pseudoelementos*/
+
+body
+{
+	/*atributos:valor;*/
+	background: rgb(10, 150, 150);  /*fondo*/
+	color: #000000;                 /*letra*/
+	max-width: 1024px;              /*ancho maximo*/
+	margin: 0 auto;
+
+	/*margin: vertical horizontal  ... si se le da un solo parametro se aplica en todos lados en vertical y horizontal*/
+	/*margin: arriba derecha abajo izquierda ... margin: 5px 2px 10px 50px*/
+	/*padding--> maneja o controla los margenes internos del texto y se colocan los mismos atributos que margin.*/
+	/*color: hotpink;*/
+
+}
