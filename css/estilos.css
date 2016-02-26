@@ -24,31 +24,60 @@ body header
 	background: rgb(0 50 100);
 	border: 2px solid black;
 	border-radius: 10px;
+	box-shadow: 2px 2px black;
 	color: black;
 	text-align: center;
 }
+
 body header h1
 {
 	background: blue;
 	border-radius: 2px;
+	color: white;
+	text-shadow: 3px 3px 3px black;
 	font-family: cursive;
 	text-align: center;
 }
+
+header img
+{
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	width: 80px;
+}
+
 body header nav ul li
 {
 	/*border: 1px solid black;*/
 	background: rgb(0 50 100);
 	border: 20px;
 	border-radius: 6px;
+	box-shadow: -3px -3px blue;                 /*es para poner sombras, derecha, abajo, color; si se coloca numero negativo es hacia la derecha y arriba*/
 	color: black;
 	display: inline-block;	
 	margin: 0px 10px;
 	padding: 5px 50px 5px 50px;
 }
-body header nav ul li:hover  /*Al pasar el mouse*/
+
+body header nav ul li:hover  /*Al pasar el mouse cambia el color*/
 {
 	background: black;
 	color: white;
+}
+
+/*Aquí van los id´s*/
+#seccion1
+{
+	border: 10px solid blue;
+}
+
+#seccion1 article
+{
+	border: 10px solid black;
+	display: inline-block;
+	vertical-align: top;
+	width: 47.8%;
 }
 
 
