@@ -21,6 +21,7 @@ body
 
 body header
 {
+
 	background: rgb(0 50 100);
 	border: 2px solid black;
 	border-radius: 10px;
@@ -31,11 +32,12 @@ body header
 
 body header h1
 {
+	font-family: 'Lora', serif;
 	background: blue;
 	border-radius: 2px;
 	color: white;
 	text-shadow: 3px 3px 3px black;
-	font-family: cursive;
+	
 	text-align: center;
 }
 
@@ -49,6 +51,7 @@ header img
 
 body header nav ul li
 {
+	font-family: 'Montserrat', sans-serif;
 	/*border: 1px solid black;*/
 	background: rgb(0 50 100);
 	border: 20px;
@@ -57,11 +60,12 @@ body header nav ul li
 	color: black;
 	display: inline-block;	
 	margin: 0px 10px;
-	padding: 5px 50px 5px 50px;
+	padding: 5px 35px 5px 35px;
 }
 
 body header nav ul li:hover  /*Al pasar el mouse cambia el color*/
 {
+	font-family: 'PT Sans Narrow', sans-serif;
 	background: black;
 	color: white;
 }
@@ -69,17 +73,22 @@ body header nav ul li:hover  /*Al pasar el mouse cambia el color*/
 /*Aquí van los id´s*/
 #seccion1
 {
+	font-family: 'Open Sans Condensed', sans-serif;
 	border: 10px solid blue;
 }
 
 #seccion1 article
 {
+	font-family: 'Titillium Web', sans-serif;
 	border: 10px solid black;
 	display: inline-block;
 	vertical-align: top;
 	width: 47.8%;
 }
-
+#seccion2
+{
+	font-family: 'Lora', cursive;
+} 
 
 
 
