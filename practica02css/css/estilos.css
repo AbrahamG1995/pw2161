@@ -75,9 +75,61 @@ body header nav ul li
 	text-align: right;
 }
 
+#Sec3Art1
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 24.5%;
+	text-align: center;
+}
+
+#Sec3Art2
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 24%;
+	text-align: center;
+}
+
+#Sec3Art3
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 24%;
+	text-align: center;
+}
+
+#Sec3Art4
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 24%;
+	text-align: center;
+	margin-top: 10%;
+}
+
 #TerceraSeccion article img
 {
 	vertical-align: middle;
+}
+
+#ColorRosa1
+{
+	color: #FF0099;
+	font-size: 1em;
+}
+
+#ColorRosa2
+{
+	color: #FF0099;
+	font-size: 1.5em;
+}
+
+.ColorRosa
+{
+	color: #FF0099; /*color rosa*/
+	font-size: 1em;
+	font-weight: bold;
 }
 
 .NumTel

@@ -1,0 +1,22 @@
+head
+{
+	background: red;
+}
+head nav ul li
+{
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+}
+
+head article
+{
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+}
+
+
+
+
+

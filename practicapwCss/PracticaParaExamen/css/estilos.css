@@ -1,0 +1,186 @@
+body
+{
+	max-width: 1024px;
+	width: 100%;
+	margin:0 auto;
+}
+header nav ul
+{
+	background: -webkit-linear-gradient(top,#D64E04 -85%,#F7AB68,#D64E04);
+}
+nav ul
+{
+	border-radius: 10px;
+	background: #F6661D;
+}
+header nav ul li
+{
+	display: inline-block;
+	margin: 0 10px;
+	color: white;
+	font-family: arial;
+	font-weight: bold;
+	padding: 15px 5px;
+}
+header nav ul li:hover
+{
+	background: #DD4812;
+}
+h2
+{
+	color: gray;
+}
+
+#leer
+{
+	border-radius: 10px;
+	background: #BDBDBD;
+	display: inline-block;
+	color: white;
+	font-style:italic ;
+	font-family: arial;
+	padding: 5px 7px;
+}
+#leer:hover
+{
+	background: grey;
+}
+
+#img
+{
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+	margin-right: 3%;
+	margin-top: -8%;
+}
+#Seccion1
+{
+	
+}
+
+#Sec1Art1
+{
+
+	width: 69%;
+	text-align: center;
+	display: inline-block;
+
+}
+#Sec1Art1 img
+{
+	width: 75%;
+} 
+#Sec1Art2
+{
+	width: 30%;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid grey;
+	border-radius: 10px;
+}
+#Seccion2 article h3
+{
+	font-size: 2em;
+	font-weight: bold;
+	color: #BDBDBD;
+	font-family: arial;
+}
+#Sec2Art1
+{
+	display: inline-block;
+	border: 6px solid #BDBDBD;
+}
+#Sec2Art2
+{
+	vertical-align: top;
+	display: inline-block;
+	width: 70%;
+	padding: 5px;
+}
+#Sec2Art2 span
+{
+	margin-top: 5px;
+	border-radius: 10px;
+	background: #EEEEEE;
+	padding: 8px 44% 8px 10px;
+}
+#Sec2Art3
+{
+	display: inline-block;
+	width: 30%;
+
+}
+#Sec2Art3 article 
+{
+	background: #EEEEEE;
+	border: 1px solid #BDBDBD;
+	border-radius: 10px;
+
+}
+#Sec2Art0
+{
+	vertical-align: top;
+	display: inline-block;
+	width: 69%;
+}
+#Sec2Art4
+{
+	padding: 0px 0px 7px 0px;
+}
+#Sec2Art5 ul a
+{
+	text-decoration: none;
+}
+#Sec2Art5 ul li
+{
+	border-width: .5px;
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px;
+	border-style: dotted;
+	margin-bottom: 10px;
+	width: 90%;
+	color: black;
+}
+#inputs
+{
+
+	margin-left: 10px;
+	padding: 3px 0;
+	width: 90%;
+	text-align: center;
+	border: 1px solid #BDBDBD;
+	border-radius: 15px;
+}
+#Buscador
+{
+	border-radius: 9px;
+	width: 85%;
+}
+#Boton
+{
+	border-radius: 200px 200px 200px 200px;
+	padding: 2px 2px;
+	background: #9E9E9E;
+	color: white;
+	border: 1px solid black;
+}
+
+.head
+{
+	
+	margin-bottom: 15px;
+	width: 95%;
+	color: white;
+	border-radius: 10px;
+	font-family: arial;
+	font-weight: bold;
+	padding: 8px;
+	text-align: center;
+	background: #F6661D;
+}
+.imagenes img
+{
+	width: 45%;
+}
