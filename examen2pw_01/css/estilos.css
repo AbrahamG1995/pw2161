@@ -1,0 +1,183 @@
+body
+{
+	margin: 0 auto;
+	max-width: 1024px;
+	width: 100%;
+}
+header
+{
+	border-bottom: 1px dashed black; 
+	padding-bottom: 50px;
+	width: 100%;
+}
+header>img
+{
+	margin-left: 30px;
+	margin-top: 30px; 
+}
+header nav ul
+{
+	margin-top: 8%;
+
+}
+header nav ul li
+{
+	display: inline-block;
+	font-weight: bold;
+	padding: 0 8px;
+	vertical-align: top;
+}
+header nav ul li:hover
+{
+	background: black;
+	color: white;
+}
+#imagenes
+{
+	display: inline-block;
+	float: right;
+	margin-top: 20px;
+	vertical-align: top;
+	width: 20%;
+}
+#buy
+{
+	
+}
+#buy1
+{
+	display: inline-block;
+	float: right;
+	margin: 1px 150px 0 70px;
+}
+#buy2
+{
+	display: inline-block;
+	float: right;
+	margin: 80px -80px 0 -200px;
+}
+#Seccion1
+{
+	margin-top: 30px;
+	width: 100%;
+}
+#Sec1Art1
+{
+	border-bottom: 1px dashed black;
+	display: inline-block;
+	font-size: 2em;
+	font-weight: bold;
+	vertical-align: top;
+	width: 59%;
+}
+#colorverde
+{
+	color: #78F04C;
+}
+#Sec1Art2
+{
+	color: rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	vertical-align: top;
+	width: 59%;
+}
+#Sec1Art3
+{
+	width: 59%;
+	
+}
+#Sec1Art3 img
+{
+	width: 49%;
+}
+#Sec1Art4
+{
+	display: inline-block;
+	float: right;
+	margin-top: -485px;
+	text-align: center;
+	vertical-align: top;
+	width: 39%;
+}
+#Sec1Art4>img
+{
+	width: 83%;
+	
+}
+#Sec1Art4>span>img
+{
+	padding-top: -50px;
+	margin-right: 300px;
+	width: 30%;
+}
+#Seccion2
+{
+	color: rgba(0, 0, 0, 0.5);
+	margin: 30px 0 15px 5px;
+}
+#Sec2span
+{
+	display: inline-block;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	vertical-align: top; 
+}
+#Seccion3
+{
+	width: 100%;
+}
+#Sec3Art1
+{
+	color: rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	vertical-align: top;
+	width: 19%;
+}
+#Sec3Art2
+{
+	color: rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	vertical-align: top;
+	width: 19%;
+}
+#Sec3Art3
+{
+	color: rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	vertical-align: top;
+	width: 19%;
+}
+#Sec3Art4
+{
+	color: rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	vertical-align: top;
+	width: 19%;
+}
+#Sec3Art5
+{
+	color: rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	vertical-align: top;
+	width: 19%;
+
+}
+.Letrasabajo
+{
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	padding-bottom: 8px;
+	padding-right: 54px;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
