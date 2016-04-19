@@ -16,49 +16,90 @@ body h1
 table
 {
 	border-collapse: collapse;
-	border: 1px solid blue;
+	
 	margin: 0 auto;
 	
 }
-form
+form input[type="button"]
 {
-	border: 1px solid red;
+	border: 0px;
 	margin: 0 auto;
-	width: 300px;
+	width: 200px;
+	height: 200px;
+	background: white;
 }
-#boton1
-{
 
+#tr1, #tr2
+{
+	border-bottom: 4px solid red;
+}
+
+.botones
+{
+	border-right: 4px solid red;
+} 
+
+
+/*#boton1
+{
+	border-right: 4px solid red;
+	border-top: none;
+	border-left: none;
+	border-bottom: 4px solid red;
 }
 #boton2
 {
-	
+	border-right: none;
+	border-top: none;
+	border-left: none;
+	border-bottom: 4px solid red;
 }
 #boton3
 {
-	
+	border-right: none;
+	border-top: none;
+	border-left: 4px solid red;
+	border-bottom: 4px solid red;
 }
 #boton4
 {
-	
+	border-right: 4px solid red;
+	border-top: none;
+	border-left: none;
+	border-bottom: 4px solid red;
 }
 #boton5
 {
-	
+	border-right: none;
+	border-top: none;
+	border-left: none;
+	border-bottom: 4px solid red;
 }
 #boton6
 {
-	
+	border-right: none;
+	border-top: none;
+	border-left: 4px solid red;
+	border-bottom: 4px solid red;
 }
 #boton7
 {
-	
+	border-right: 4px solid red;
+	border-top: none;
+	border-left: none;
+	border-bottom: none;
 }
 #boton8
 {
-	
+	border-right: none;
+	border-top: none;
+	border-left: none;
+	border-bottom: none;
 }
 #boton9
 {
-	
-}
+	border-left: 4px solid red;
+}*/
+
+
+
