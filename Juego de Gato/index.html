@@ -7,23 +7,23 @@
 	<script src="js/gato.js"></script>
 </head>
 <body>
-	<h1>Juego del Gato<input type="text" value="1" onclick="Contador(this.value);"></h1>
+	<h1>Juego del Gato<input type="text" id="partidas" value="1" onclick="Contador(this.value);"></h1>
 	<form action="#" name="JuegoGato">
 		<table>
 			<tr id="tr1">
-				<td class="botones"><input name="boton" type="button" onclick="clic(this.name);"></td>
-				<td class="botones"><input name="boton" type="button" onclick="clic(this.name);"></td>
-				<td><input name="boton" type="button" onclick="clic(this.name);"></td>
+				<td class="botones"><input name="boton1" id="b1" type="button" onclick="click1();"></td>
+				<td class="botones"><input name="boton2" id="b2" type="button" onclick="click2();"></td>
+				<td><input name="boton3"  id="b3" type="button" onclick="click3();"></td>
 			</tr>
 			<tr id="tr2">
-				<td class="botones"><input name="boton" type="button" onclick="clic(this.name);"></td>
-				<td class="botones"><input name="boton" type="button" onclick="clic(this.name);"></td>
-				<td><input name="boton" type="button" onclick="clic(this.name);"></td>
+				<td class="botones"><input  id="b4" name="boton4" type="button" onclick="click4();"></td>
+				<td class="botones"><input  id="b5" name="boton5" type="button" onclick="click5();"></td>
+				<td><input name="boton6"  id="b6" type="button" onclick="click6();"></td>
 			</tr>
 			<tr>
-				<td class="botones"><input name="boton" type="button" onclick="clic(this.name);"></td>
-				<td class="botones"><input name="boton" type="button" onclick="clic(this.name);"></td>
-				<td><input name="boton" type="button" onclick="clic(this.name);"></td>
+				<td class="botones"><input name="boton7"  id="b7" type="button" onclick="click7();"></td>
+				<td class="botones"><input name="boton8"  id="b8" type="button" onclick="click8();"></td>
+				<td><input name="boton9"  id="b9" type="button" onclick="click9();"></td>
 			</tr>
 		</table>
 	</form>
