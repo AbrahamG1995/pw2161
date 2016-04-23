@@ -18,8 +18,8 @@ table
 	border-collapse: collapse;
 	margin: 0 auto;
 	margin-top: 50px;
-	
 }
+
 form input[type="button"]
 {
 	border: none;
@@ -30,8 +30,8 @@ form input[type="button"]
 	width: 200px;
 	height: 200px;
 	background: white;
+	
 }
-
 
 #tr1, #tr2
 {
@@ -44,7 +44,7 @@ form input[type="button"]
 	color: black;
 	font-size: 1.1em;
 	margin: 0 auto;
-	margin-left: 20px;
+	margin-left: 4px;
 	width: 20px;
 	background: white;
 }
@@ -53,7 +53,6 @@ form input[type="button"]
 {
 	border-right: 7px solid red;
 } 
-
 
 /*#boton1
 {
