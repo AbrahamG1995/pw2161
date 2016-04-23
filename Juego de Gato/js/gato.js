@@ -190,30 +190,69 @@ function Resultado()
 				if(contador%2==0)
 				{
 					alert("Felicades ha ganado player O");
-					window.location.reload();
+					/*window.location.reload();*/
 					suma=suma+1;
-					alert(suma);
+					
 					document.JuegoGato.partidas.value=suma;
+					if(suma>1)
+					{
+						document.JuegoGato.b1.value="";
+						document.JuegoGato.b2.value="";
+						document.JuegoGato.b3.value="";
+						document.JuegoGato.b4.value="";
+						document.JuegoGato.b5.value="";
+						document.JuegoGato.b6.value="";
+						document.JuegoGato.b7.value="";
+						document.JuegoGato.b8.value="";
+						document.JuegoGato.b9.value="";
+					}
 					
 				}
 				else
 				{
 					alert("Felicades ha ganado player X");
-					window.location.reload();
-					numarriba=numarriba+1;
-					document.JuegoGato.partidas.value=numarriba;
+					/*window.location.reload();*/
+					suma=suma+1;
+					
+					document.JuegoGato.partidas.value=suma;
+					if(suma>1)
+					{
+						document.JuegoGato.b1.value="";
+						document.JuegoGato.b2.value="";
+						document.JuegoGato.b3.value="";
+						document.JuegoGato.b4.value="";
+						document.JuegoGato.b5.value="";
+						document.JuegoGato.b6.value="";
+						document.JuegoGato.b7.value="";
+						document.JuegoGato.b8.value="";
+						document.JuegoGato.b9.value="";
+					}
 					
 				}
 				document.JuegoGato.partidas.value=suma;
-				alert(suma);
+				
 				contador=0;
 			}
 			else
 			{
 				if(contador>8)
 				{
-					
 					alert("Habeís empatado.");
+					suma=suma+1;
+					
+					document.JuegoGato.partidas.value=suma;
+					if(suma>1)
+					{
+						document.JuegoGato.b1.value="";
+						document.JuegoGato.b2.value="";
+						document.JuegoGato.b3.value="";
+						document.JuegoGato.b4.value="";
+						document.JuegoGato.b5.value="";
+						document.JuegoGato.b6.value="";
+						document.JuegoGato.b7.value="";
+						document.JuegoGato.b8.value="";
+						document.JuegoGato.b9.value="";
+					}
 					contador=0;
 				}
 			}
@@ -222,7 +261,7 @@ function Resultado()
 
 function actualizar()
 {
-	
+
 }
 
 /*function Contador()
