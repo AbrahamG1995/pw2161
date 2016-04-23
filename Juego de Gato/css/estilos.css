@@ -50,6 +50,36 @@ form input[type="button"]
 	background: white;
 }
 
+#PlayerX
+{		
+	text-align: center;
+	border: none;
+	color: blue;
+	font-size: 1.1em;
+	background: white;
+	width: 30px;
+}
+
+#PlayerO
+{
+	text-align: center;
+	border: none;
+	color: blue;
+	font-size: 1.1em;
+	background: white;
+	width: 30px;
+}
+
+.Players
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 100px;
+	margin-left: 100px;
+	font-size: 2em;
+	width: 200px;
+}
+
 .botones
 {
 	border-right: 7px solid red;

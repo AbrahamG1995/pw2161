@@ -176,6 +176,8 @@ function Asignacion()
 
 
 var suma=parseInt(localStorage.getItem("partidas"));
+var playersX=1;
+var playersO=1;
 
 function Resultado()
 {
@@ -206,7 +208,8 @@ function Resultado()
 						document.JuegoGato.b8.value="";
 						document.JuegoGato.b9.value="";
 					}
-					
+					document.JuegoGato.PlayerO.value=playersO;
+					playersO=playersO+1;
 				}
 				else
 				{
@@ -227,7 +230,8 @@ function Resultado()
 						document.JuegoGato.b8.value="";
 						document.JuegoGato.b9.value="";
 					}
-					
+					document.JuegoGato.PlayerX.value=playersX;
+					playersX=playersX+1;
 				}
 				document.JuegoGato.partidas.value=suma;
 				
@@ -253,6 +257,7 @@ function Resultado()
 						document.JuegoGato.b8.value="";
 						document.JuegoGato.b9.value="";
 					}
+					
 					contador=0;
 				}
 			}
