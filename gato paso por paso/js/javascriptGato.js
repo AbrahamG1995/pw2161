@@ -103,6 +103,18 @@ function Borrar()
 	iniciaGato();
 }
 
+function BorrarD()
+{
+	document.tituloJuego.unouno.value="";
+	document.tituloJuego.unodos.value="";
+	document.tituloJuego.unotres.value="";
+	document.tituloJuego.dosuno.value="";
+	document.tituloJuego.dosdos.value="";
+	document.tituloJuego.dostres.value="";
+	document.tituloJuego.tresuno.value="";
+	document.tituloJuego.tresdos.value="";
+	document.tituloJuego.trestres.value="";
+}
 
 
 
