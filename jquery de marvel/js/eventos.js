@@ -23,7 +23,9 @@ var inicio = function()
 					if(typeof dato.data.results !== 'undefined' && dato.data.results.length>0)
 					{
 						console.log("ojnaoscn");
+						$("#fotoMarvel").attr("src", dato.data.results[0].thumbnail.path+"."+dato.data.results[0].thumbnail.extension);
 						$("#txtNombreMarvel").html(dato.data.results[0].name);
+						$("#txtDescripcion").html(dato.data.results[0].description)
 					}
 					else
 					{
@@ -47,7 +49,19 @@ var inicio = function()
 		}
 		
 	}
+	var teclaUnInput = function(tecla)
+	{
+		if(tecla.which == 13)
+		{
+			//que se posicione en otroInput
+			$("#boton").click();
+			//$("#boton").on("click", clickboton);
+		}
+	}
 	$("#boton").on("click", clickboton);
+	$("#Nombre").focus();
+	$("#Nombre").on("keypress", teclaUnInput);
+
 }
 
 $(document).on("ready",inicio);
