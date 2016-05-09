@@ -25,7 +25,7 @@ var inicio = function()
 						console.log("ojnaoscn");
 						$("#fotoMarvel").attr("src", dato.data.results[0].thumbnail.path+"."+dato.data.results[0].thumbnail.extension);
 						$("#txtNombreMarvel").html(dato.data.results[0].name);
-						$("#txtDescripcion").html(dato.data.results[0].description)
+						$("#txtDescripcion").html(dato.data.results[0].description);
 					}
 					else
 					{
