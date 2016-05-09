@@ -1,0 +1,20 @@
+body
+{
+	max-width: 1024px;
+	margin: 0 auto;
+	font-size: 1.6em;
+	text-align: center;
+}
+
+#Nombre
+{
+	 background: black;
+	 color: white;
+
+}
+
+#boton
+{
+	background: blue;
+	color: white;
+}
