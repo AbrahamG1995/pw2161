@@ -15,7 +15,12 @@ header nav
 header nav ul li
 {
 	display: inline-block;
-	vertical-align: top;
+
+}
+
+header nav ul li button
+{
+	width: 89px
 }
 
 
