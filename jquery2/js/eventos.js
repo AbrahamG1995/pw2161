@@ -8,7 +8,7 @@ var iniciaApp = function()
 		var usuario = $("#txtUsuario").val();
 		var clave = $("#txtClave").val();
 	//***************__validaciones__*****************
-		//1.-Que no sean vacios
+		// 1.-Que no sean vacios
 		if(usuario == "")
 		{
 			alert("Usuario Vacio");
@@ -20,22 +20,50 @@ var iniciaApp = function()
 			$("#txtContraseña").focus();
 		}
 		
-		//verificar usuario y contraseña
-		if(usuario == "pw" && clave == "1234")
-		{
-			//alert("Bienvenido " +usuario);
-			//Dar entrada al usuario
-			$("#datosUsuario").hide(); //el .hide sirve para esconder
-			$("nav").show("slow"); // para quitar el display: none y mostrar el menú
-		}
-		else
-		{
-			alert("Usuario y/o contraseña incorrecta");
-		}			
+		//verificar usuario y contraseña  *********** NO HACERLO **********
+		// if(usuario == "pw" && clave == "1234")
+		// {
+		// 	//alert("Bienvenido " +usuario);
+		// 	//Dar entrada al usuario
+		// 	$("#datosUsuario").hide(); //el .hide sirve para esconder
+		// 	$("nav").show("slow"); // para quitar el display: none y mostrar el menú
+		// }
+		// else
+		// {
+		// 	alert("Usuario y/o contraseña incorrecta");
+		// }			
 
+		// 2.-Verificar usuario y contraseña
+		var parametros="accion=validarEntrada"+
+						"&usuario="+usuario+"&clave="+clave+
+						"&id="+Math.random();
+		$.ajax({
+			beforeSend:function(){
+				console.log("Validar al usuario");
+			},
+			cache: false,
+			type: "POST",
+			dataType: "json",
+			url: "php/funciones.php",
+			data: parametros,
+			success: function(responde){
+
+			},
+			error: function(xhr, ajaxOptionx, thrownError){
+				console.log("Algo salió mal");
+			},
+
+		});
 		console.log("Se disparó el submit");
 	}
 	$("#frmValidaEntrada").on("submit", validarEntrada);
 }
 
 $(document).on("ready", iniciaApp);
+
+
+
+
+
+
+
