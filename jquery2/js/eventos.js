@@ -46,8 +46,16 @@ var iniciaApp = function()
 			dataType: "json",
 			url: "php/funciones.php",
 			data: parametros,
-			success: function(responde){
-
+			success: function(response){
+				if(response.respuesta)
+				{
+					$("#datosUsuario").hide();
+					$("nav").show("slow");
+				}
+				else
+				{
+					alert("Usuario/Contraseña incorrecto(s)");
+				}
 			},
 			error: function(xhr, ajaxOptionx, thrownError){
 				console.log("Algo salió mal");
