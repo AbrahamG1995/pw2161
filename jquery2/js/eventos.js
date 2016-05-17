@@ -47,14 +47,17 @@ var iniciaApp = function()
 			url: "php/funciones.php",
 			data: parametros,
 			success: function(response){
-				if(response.respuesta)
-				{
+				if(response.respuesta){
 					$("#datosUsuario").hide();
 					$("nav").show("slow");
 				}
-				else
-				{
+				else{
 					alert("Usuario/Contraseña incorrecto(s)");
+					//$("txtUsuario").empty();
+					document.getElementById('txtUsuario').value = "";
+					document.getElementById('txtClave').value = "";
+					$("#txtUsuario").focus();
+					//txtContraseña = "";
 				}
 			},
 			error: function(xhr, ajaxOptionx, thrownError){

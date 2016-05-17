@@ -57,6 +57,7 @@
 	//Menu Principal
 	switch ($accion) {
 		case 'validarEntrada':
+			validaEntrada();
 			# code...
 			break;
 		
