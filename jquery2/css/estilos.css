@@ -23,6 +23,12 @@ header nav ul li button
 	width: 89px
 }
 
+#altaUsuarios
+{
+	display: none;
+	margin: 0 auto;
+	width: 400px;
+}
 
 #datosUsuario
 {
@@ -30,3 +36,4 @@ header nav ul li button
 	width: 320px;
 	box-shadow: 10px 10px 5px #888888;
 }
+
