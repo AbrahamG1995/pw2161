@@ -4,6 +4,7 @@ var inicio = function()
 
 	var clickboton = function()
 	{
+		$("#tabla").empty();
 		console.log("holaaa");
 		if($("#Nombre").val()) {
 			
@@ -20,12 +21,26 @@ var inicio = function()
 				success: function(dato){
 					console.log(dato);
 
+					var i=0;
 					if(typeof dato.data.results !== 'undefined' && dato.data.results.length>0)
 					{
-						console.log("ojnaoscn");
-						$("#fotoMarvel").attr("src", dato.data.results[0].thumbnail.path+"."+dato.data.results[0].thumbnail.extension);
-						$("#txtNombreMarvel").html(dato.data.results[0].name);
-						$("#txtDescripcion").html(dato.data.results[0].description)
+						
+						for(i;i<dato.data.results.length;i++)
+						{
+							var img=dato.data.results[i].thumbnail.path+"."+dato.data.results[i].thumbnail.extension;
+							
+							//$("#tabla").append();
+							//$("#tabla").append();
+							//$("#tabla").append();
+							//$("#tabla").append();
+							//$("#tabla").append();
+
+							$("#tabla").append('<tr>'+'<td>' + '<img src='+img+' '+'alt="">'+'</td>'+'<td>' + dato.data.results[i].name + '</td>'+'<td>' + dato.data.results[i].description + '</td>'+'</tr>')
+							//$("#fotoMarvel").attr("src", dato.data.results[i].thumbnail.path+"."+dato.data.results[i].thumbnail.extension);
+							//$("#txtNombreMarvel").html(dato.data.results[i].name);
+							//$("#txtDescripcion").html(dato.data.results[i].description);
+						}		
+								
 					}
 					else
 					{

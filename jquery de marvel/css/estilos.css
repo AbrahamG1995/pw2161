@@ -6,16 +6,19 @@ body
 	text-align: center;
 }
 
-body table
+body section div table tr td
 {
 	text-align: center;
-	/*border: 1px black solid;*/
+	border: 1px black solid;
 	margin: 0 auto;
+	height: 200px;
+	width: 200px;
+	
 }
 
 td img
 {
-	width: 22%;
+	width: 100%;
 	border-radius: 100%;
 }
 
@@ -26,20 +29,5 @@ td img
 	text-align: center;
 }
 
-#boton
-{
-	background: blue;
-	color: white;
-}
 
-#txtNombreMarvel
-{
-	color: blue;
-	font-weight: bold;
-}
-
-#txtDescripcion
-{
-	font-size: 0.7em;
-}
 
