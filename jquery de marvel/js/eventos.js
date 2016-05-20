@@ -24,6 +24,7 @@ var inicio = function()
 					var i=0;
 					if(typeof dato.data.results !== 'undefined' && dato.data.results.length>0)
 					{
+<<<<<<< HEAD
 						
 						for(i;i<dato.data.results.length;i++)
 						{
@@ -41,6 +42,12 @@ var inicio = function()
 							//$("#txtDescripcion").html(dato.data.results[i].description);
 						}		
 								
+=======
+						console.log("ojnaoscn");
+						$("#fotoMarvel").attr("src", dato.data.results[0].thumbnail.path+"."+dato.data.results[0].thumbnail.extension);
+						$("#txtNombreMarvel").html(dato.data.results[0].name);
+						$("#txtDescripcion").html(dato.data.results[0].description);
+>>>>>>> 6e9c5ada3e283cced9dca319e84c90430b27e3a1
 					}
 					else
 					{
