@@ -71,7 +71,9 @@ var iniciaApp = function()
 	var Altas = function() {
 		//Mostramos el formulario
 		$("#altaUsuarios").show("slow");
-
+		$("#altaUsuarios h2").html("Alta Usuarios");
+		$("#bajaUsuarios").hide();
+		$("#txtNombreUsuario").focus();
 	}
 
 	var AltaUsuario = function() {
@@ -100,13 +102,54 @@ var iniciaApp = function()
 			},
 			error: function(xhr,ajax,thrownError) {
 				console.log("Algo salió mal");
-			}
+			} 
 		});
 	}
 
+	var Bajas = function() {
+		//Mostramos el formulario
+		$("#bajaUsuarios").show("slow");
+		$("#bajaUsuarios h2").html("Baja Usuarios");
+		$("#altaUsuarios").hide();
+		$("#txtNombreU").focus();
+
+	}
+
+	var BajaUsuario = function() {
+
+		event.preventDefault();
+		//alert($("#frmAltaUsuarios").serialize());
+		var datos = $("#frmBajaUsuarios").serialize();
+		var parametros = "accion=EliminaUsuario&"+datos+"&id="+Math.random();
+
+		$.ajax({
+			beforeSend:function(){
+				console.log("Usuario Eliminado");
+			},
+			cache: false,
+			type: "POST",
+			dataType: "json",
+			url: "php/funciones.php",
+			data: parametros,
+			success: function(response) {
+				if(response.respuesta) {
+					alert("Usuario Eliminado correctamente");
+				}
+				else {
+					alert("No se pudo Eliminar");
+				}
+			},
+			error: function(xhr,ajax,thrownError) {
+				console.log("Algo salió mal");
+			} 
+		});
+	}
+	
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
 	$("#frmAltaUsuarios").on("submit",AltaUsuario);
+	$("#btnBajas").on("click",Bajas);
+	$("frmBajaUsuarios").on("submit",BajaUsuario);
 }
 
 $(document).on("ready", iniciaApp);

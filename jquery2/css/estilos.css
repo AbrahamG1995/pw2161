@@ -25,9 +25,20 @@ header nav ul li button
 
 #altaUsuarios
 {
+	box-shadow: 10px 10px 5px #888888;
+	border-radius: 10px;
 	display: none;
 	margin: 0 auto;
-	width: 400px;
+	width: 350px;
+}
+
+#bajaUsuarios
+{
+	box-shadow: 10px 10px 5px #888888;
+	border-radius: 10px;
+	display: none;
+	margin: 0 auto;
+	width: 350px;
 }
 
 #datosUsuario

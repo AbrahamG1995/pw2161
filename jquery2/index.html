@@ -15,7 +15,7 @@
 			<ul>
 				<li><button class="btn btn-default">Inicio</button></li>
 				<li><button id="btnAltas" class="btn btn-success">Alta</button></li>
-				<li><button class="btn btn-warning">Baja</button></li>
+				<li><button id="btnBajas" class="btn btn-warning">Baja</button></li>
 				<li><button class="btn btn-info">Cambios</button></li>
 				<li><button class="btn btn-primary">Consultas</button></li>
 				<li><button class="btn btn-danger">Salir</button></li>
@@ -52,6 +52,17 @@
 					</select>
 					<input type="text" class="form-control" id="txtDepartamento" name="txtDepartamento" placeholder="Departamento" required>
 					<input type="submit" value="Enviar" id="btnAltaUsuario" name="btnAltaUsuario" class="btn btn-success btn-lg btn-block" required>
+				</form>
+			</article>
+		</section>
+		<section>
+			<article id="bajaUsuarios">
+				<h2>Elimina Usuario</h2>
+				<form action="#" id="frmBajaUsuarios" name="frmBajaUsuarios">
+					<input type="text" class="form-control" id="txtNombreU" placeholder="Usuario" name="txtNombreU" required>
+					<input type="password" class="form-control" id="txtClaveU" name="txtClaveU" placeholder="Contraseña" required>
+					
+					<input type="submit" value="Enviar" id="btnAltaUsuario" name="btnAltaUsuario" class="btn btn-danger btn-lg btn-block" required>
 				</form>
 			</article>
 		</section>

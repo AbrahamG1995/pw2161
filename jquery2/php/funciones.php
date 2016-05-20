@@ -76,6 +76,51 @@
 		print json_encode($salidaJSON);
 	}
 
+	function EliminaUsuario()
+	{
+		$usuario = GetSQLValueString($_POST["txtNombreU"], "text");
+		$clave   = GetSQLValueString(md5($_POST["txtClaveU"]), "text");
+
+		$respuesta = false;
+		$conexion = mysql_connect("localhost", "root", "");
+		mysql_select_db("cursopw");
+
+		$bandera = Buscar($usuario, $clave);
+
+		if($bandera)
+		{
+			$baja = sprintf("delete from usuarios where usuario=%s and clave=%s",$usuario,$clave);
+			mysql_query($baja);
+			if(mysql_affected_rows()>0)
+			{
+				$respuesta = true;
+			}
+		}
+		$salidaJSON = array('respuesta' => $respuesta);
+		print json_encode($salidaJSON);
+	}
+
+	function Buscar($usuario,$clave)
+	{
+		$respuesta = false;
+		$conexion = mysql_connect("localhost", "root", "");
+		mysql_select_db("cursopw");
+
+		$Busqueda = sprintf("select usuario, clave from usuarios where usuario=%s and clave=%s limit 1",$usuario,$clave);
+
+		$resultado = mysql_query($Busqueda);
+		//Preguntamos si se trajo un registro
+		if(mysql_num_rows($resultado) > 0)
+		{
+			$respuesta = true;
+		} 
+		/*$salidaJSON = array('respuesta' => $respuesta );
+		//Devolvemos el resultado 
+		print json_encode($salidaJSON);*/
+		return $respuesta;
+	}
+
+
 
 	$accion = $_POST["accion"];
 	//Menu Principal
@@ -86,6 +131,10 @@
 			break;
 		case 'guardaUsuario':
 			guardaUsuario();
+			# code...
+			break;
+		case 'EliminaUsuario':
+			EliminaUsuario();
 			# code...
 			break;
 		default:
