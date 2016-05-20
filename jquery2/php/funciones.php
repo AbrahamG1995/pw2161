@@ -65,13 +65,20 @@
 		$conexion = mysql_connect("localhost", "root", "");//127.0.0.1
 		//Conectarse a la BD
 		mysql_select_db("cursopw");
-		$guardar = sprintf("insert into usuarios values(%s,%s,%s,%d)",$usuario,$clave,$tipo,$depto);
-		//Ejecutamos la consulta de guardar
-		mysql_query($guardar);
-		//Cuantos registros fueros afectados
-		if(mysql_affected_rows() > 0) {
-			$respuesta = true;
+
+		$bandera = Buscar($usuario, $clave);
+
+		if(!$bandera)
+		{
+			$guardar = sprintf("insert into usuarios values(%s,%s,%s,%d)",$usuario,$clave,$tipo,$depto);
+			//Ejecutamos la consulta de guardar
+			mysql_query($guardar);
+			//Cuantos registros fueros afectados
+			if(mysql_affected_rows() > 0) {
+				$respuesta = true;
+			}
 		}
+		
 		$salidaJSON = array('respuesta' => $respuesta);
 		print json_encode($salidaJSON);
 	}

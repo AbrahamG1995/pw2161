@@ -95,9 +95,19 @@ var iniciaApp = function()
 			success: function(response) {
 				if(response.respuesta) {
 					alert("Usuario registrado correctamente");
+					document.getElementById('txtNombreUsuario').value = "";
+					document.getElementById('txtClaveUsuario').value = "";
+					document.getElementById('txtTipoUsuario').value = "vigente";
+					document.getElementById('txtDepartamento').value = "";
+					$("#txtNombreUsuario").focus();
 				}
 				else {
-					alert("No se pudo guardar la información");
+					alert("Usuario Repetido");
+					document.getElementById('txtNombreUsuario').value = "";
+					document.getElementById('txtClaveUsuario').value = "";
+					document.getElementById('txtTipoUsuario').value = "vigente";
+					document.getElementById('txtDepartamento').value = "";
+					$("#txtNombreUsuario").focus();
 				}
 			},
 			error: function(xhr,ajax,thrownError) {
@@ -134,9 +144,15 @@ var iniciaApp = function()
 			success: function(response) {
 				if(response.respuesta) {
 					alert("Usuario Eliminado correctamente");
+					document.getElementById('txtNombreU').value = "";
+					document.getElementById('txtClaveU').value = "";
+					$("#txtNombreU").focus();
 				}
 				else {
 					alert("No se pudo Eliminar");
+					document.getElementById('txtNombreU').value = "";
+					document.getElementById('txtClaveU').value = "";
+					$("#txtNombreU").focus();
 				}
 			},
 			error: function(xhr,ajax,thrownError) {
@@ -149,7 +165,7 @@ var iniciaApp = function()
 	$("#btnAltas").on("click",Altas);
 	$("#frmAltaUsuarios").on("submit",AltaUsuario);
 	$("#btnBajas").on("click",Bajas);
-	$("frmBajaUsuarios").on("submit",BajaUsuario);
+	$("#frmBajaUsuarios").on("submit",BajaUsuario);
 }
 
 $(document).on("ready", iniciaApp);
