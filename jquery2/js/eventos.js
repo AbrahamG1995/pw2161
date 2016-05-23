@@ -73,6 +73,7 @@ var iniciaApp = function()
 		$("#altaUsuarios").show("slow");
 		$("#altaUsuarios h2").html("Alta Usuarios");
 		$("#bajaUsuarios").hide();
+		$("#consultaUsuario").hide();
 		$("#txtNombreUsuario").focus();
 	}
 
@@ -121,6 +122,7 @@ var iniciaApp = function()
 		$("#bajaUsuarios").show("slow");
 		$("#bajaUsuarios h2").html("Baja Usuarios");
 		$("#altaUsuarios").hide();
+		$("#consultaUsuario").hide();
 		$("#txtNombreU").focus();
 
 	}
@@ -197,6 +199,37 @@ var iniciaApp = function()
 		});
 
 	}
+
+	var Consultas = function()
+	{
+		$("#consultaUsuario").show("slow");
+		$("#bajaUsuarios").hide();
+		$("#altaUsuarios").hide();
+
+		var parametros = "accion=Consulta&"+"&id="+Math.random();
+
+		$.ajax({
+			beforeSend:function(){
+				console.log("Consulta Eliminado");
+			},
+			cache: false,
+			type: "POST",
+			dataType: "json",
+			url: "php/funciones.php",
+			data: parametros,
+			success: function(response) {
+				if(response.respuesta)
+				{
+					$("#tablaConsultas").html(response.tabla);
+
+				}
+			},
+			error: function(xhr,ajax,thrownError) {
+				console.log("Algo salió mal");
+			} 
+		});
+
+	}
 	
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
@@ -204,6 +237,7 @@ var iniciaApp = function()
 	$("#btnBajas").on("click",Bajas);
 	$("#txtNombreU").on("keypress",Mostrar);
 	$("#btnbajaUsuario").on("click",BajaUsuario);
+	$("#btnConsultas").on("click",Consultas);
 }
 
 $(document).on("ready", iniciaApp);
