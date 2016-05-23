@@ -125,16 +125,18 @@ var iniciaApp = function()
 
 	}
 
-	var BajaUsuario = function() {
+	var Mostrar = function() {
 
-		event.preventDefault();
-		//alert($("#frmAltaUsuarios").serialize());
-		var datos = $("#frmBajaUsuarios").serialize();
-		var parametros = "accion=EliminaUsuario&"+datos+"&id="+Math.random();
+		if(event.keyCode == 13)
+		{
+			event.preventDefault();
+			var usu = $("#txtNombreU").val();
+			var parametros = "&accion=Mostrar"+"&Usuario="+usu+"&id="+Math.random();
 
-		$.ajax({
+
+			$.ajax({
 			beforeSend:function(){
-				console.log("Usuario Eliminado");
+			console.log("Usuario Eliminado");
 			},
 			cache: false,
 			type: "POST",
@@ -142,16 +144,50 @@ var iniciaApp = function()
 			url: "php/funciones.php",
 			data: parametros,
 			success: function(response) {
-				if(response.respuesta) {
-					alert("Usuario Eliminado correctamente");
+
+			 	if(response.respuesta) {
+
+			 		$("#txtClaveU").val(response.clave);
+					
+				}
+				else {
+				
+				}
+			},
+			error: function(xhr,ajax,thrownError) {
+				console.log("Algo salió mal");
+			} 
+		});
+			
+		}
+	}
+
+	var BajaUsuario = function() {
+
+		event.preventDefault();
+
+		var datos = $("#frmBajaUsuarios").serialize();
+		var parametros = "accion=EliminaUsuario&"+datos+"&id="+Math.random();
+
+		$.ajax({
+			beforeSend:function(){
+			console.log("Usuario Eliminado");
+			},
+			cache: false,
+			type: "POST",
+			dataType: "json",
+			url: "php/funciones.php",
+			data: parametros,
+			success: function(response) {
+
+			 	if(response.respuesta) {
+					alert("Usuario Eliminado correctamente");							
 					document.getElementById('txtNombreU').value = "";
-					document.getElementById('txtClaveU').value = "";
 					$("#txtNombreU").focus();
 				}
 				else {
 					alert("No se pudo Eliminar");
 					document.getElementById('txtNombreU').value = "";
-					document.getElementById('txtClaveU').value = "";
 					$("#txtNombreU").focus();
 				}
 			},
@@ -159,13 +195,15 @@ var iniciaApp = function()
 				console.log("Algo salió mal");
 			} 
 		});
+
 	}
 	
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
 	$("#frmAltaUsuarios").on("submit",AltaUsuario);
 	$("#btnBajas").on("click",Bajas);
-	$("#frmBajaUsuarios").on("submit",BajaUsuario);
+	$("#txtNombreU").on("keypress",Mostrar);
+	$("#btnbajaUsuario").on("click",BajaUsuario);
 }
 
 $(document).on("ready", iniciaApp);

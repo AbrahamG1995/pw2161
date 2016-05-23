@@ -31,8 +31,8 @@
 				  </article>
 				  <article class="panel-body">
 				    <form action="" id="frmValidaEntrada" name="frmValidaEntrada">
-				    	<input type="text" placeholder="Usuario" id="txtUsuario" name="txtUsuario" required class="form-control" autofocus>
-				    	<input type="password" placeholder="Contraseña" id="txtClave" name="txtClave" required class="form-control">
+				    	<input type="text"  value="pw" placeholder="Usuario" id="txtUsuario" name="txtUsuario" required class="form-control" autofocus>
+				    	<input type="password"  value="1234" placeholder="Contraseña" id="txtClave" name="txtClave" required class="form-control">
 				    	<!-- <button class="btn btn-success btn-lg btn-block">Entrar</button> -->
 				    	<input type="submit" class="btn btn-success btn-lg btn-block" value="Entrar">
 				    </form>
@@ -60,10 +60,14 @@
 				<h2>Elimina Usuario</h2>
 				<form action="#" id="frmBajaUsuarios" name="frmBajaUsuarios">
 					<input type="text" class="form-control" id="txtNombreU" placeholder="Usuario" name="txtNombreU" required>
-					<input type="password" class="form-control" id="txtClaveU" name="txtClaveU" placeholder="Contraseña" required>
+					<input type="text" class="form-control" id="txtClaveU" name="txtClaveU" placeholder="Contraseña" disabled>
+					<input type="text" class="form-control" id="txtTipoU" name="txtTipoU" placeholder="Tipo de Usuario" disabled>
+					<input type="text" class="form-control" id="txtDepto" name="txtDepto" placeholder="Departamento" disabled>
 					
-					<input type="submit" value="Enviar" id="btnAltaUsuario" name="btnAltaUsuario" class="btn btn-danger btn-lg btn-block" required>
+					<!--<input type="submit" value="Enviar" id="btnAltaUsuario" name="btnAltaUsuario" class="btn btn-danger btn-lg btn-block" required>-->
+
 				</form>
+				<button id="btnbajaUsuario">enviar</button>
 			</article>
 		</section>
 	</main>

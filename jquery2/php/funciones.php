@@ -86,24 +86,52 @@
 	function EliminaUsuario()
 	{
 		$usuario = GetSQLValueString($_POST["txtNombreU"], "text");
-		$clave   = GetSQLValueString(md5($_POST["txtClaveU"]), "text");
+		//$clave   = GetSQLValueString(md5($_POST["txtClaveU"]), "text");		
 
 		$respuesta = false;
 		$conexion = mysql_connect("localhost", "root", "");
 		mysql_select_db("cursopw");
 
-		$bandera = Buscar($usuario, $clave);
+		$clave = sprintf("select clave from usuarios where usuario=%s",$usuario);
 
-		if($bandera)
+		$resultado = mysql_query($clave);
+
+		if(mysql_num_rows($resultado))
 		{
-			$baja = sprintf("delete from usuarios where usuario=%s and clave=%s",$usuario,$clave);
+			$baja = sprintf("delete from usuarios where usuario=%s limit 1",$usuario);
 			mysql_query($baja);
 			if(mysql_affected_rows()>0)
 			{
 				$respuesta = true;
 			}
-		}
+		}	
+		
 		$salidaJSON = array('respuesta' => $respuesta);
+		print json_encode($salidaJSON);
+	}
+
+	function mostrar()
+	{
+		$usuario = GetSQLValueString($_POST["txtNombreU"], "text");
+
+		$respuesta = false;
+		$conexion = mysql_connect("localhost", "root", "");
+		mysql_select_db("cursopw");
+
+		$clave = sprintf("select clave from usuarios where usuario= '".$usuario."'");
+		
+		$tipousuario = sprintf("select tipousuario from usuarios where usuario=%s",$usuario);
+		$departamento = sprintf("select departamento from usuarios where usuario=%s",$usuario);
+
+		$resultado = mysql_query($clave);
+		if($row = mysql_num_rows($resultado))
+		{ 
+
+			$clv = $resultado["clave"];
+			$respuesta = true;
+		}
+
+		$salidaJSON = array('respuesta' => $respuesta, 'clave' => $clv);
 		print json_encode($salidaJSON);
 	}
 
@@ -142,6 +170,10 @@
 			break;
 		case 'EliminaUsuario':
 			EliminaUsuario();
+			# code...
+			break;
+		case 'Mostrar':
+			mostrar();
 			# code...
 			break;
 		default:
