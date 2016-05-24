@@ -230,6 +230,11 @@ var iniciaApp = function()
 		});
 
 	}
+	var BajaDinamica = function() 
+	{
+		var usuario = $(this).attr("id");
+		console.log(usuario);
+	}
 	
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
@@ -238,6 +243,10 @@ var iniciaApp = function()
 	$("#txtNombreU").on("keypress",Mostrar);
 	$("#btnbajaUsuario").on("click",BajaUsuario);
 	$("#btnConsultas").on("click",Consultas);
+	//Eventos dinámicos
+	$("#tablaConsultas").on("click","button",BajaDinamica);
+	//Otra Forma
+	//$("#tablaConsultas > input").on("click",BajaDinamica);
 }
 
 $(document).on("ready", iniciaApp);
