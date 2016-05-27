@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Examen Almacen</title>
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/jquery-2.2.3.js"></script>
+	<script src="js/eventos.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><button id="btnInicio" class="btn btn-default">Inicio</button></li>
+				<li><button id="btnBajas" class="btn btn-danger">Bajas</button></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<article id="BajaAlmacen">
+				<h2>Bajas de Almacenes</h2>
+				<form action="#" id="frmBajaAlmacen" name="frmBajaAlmacen">
+					<input type="text" id="txtIdAlmacen" name="txtIdAlmacen" placeholder="ID de Almacen" class="form-control" required autofocus>
+					<input type="text" id="txtNombre" name="txtNombre" placeholder="Nombre" class="form-control" required>
+					<input type="submit" value="Eliminar" id="btnBajaAlmacen" name="btnBajaAlmacen" class="btn btn-danger btn-lg btn-block" required>
+				</form>
+			</article>
+		</section>
+	</main>
+</body>
+</html>

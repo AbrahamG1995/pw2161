@@ -1,0 +1,31 @@
+body
+{
+	margin: 0 auto;
+	max-width: 1024px;
+	text-align: center;
+	font-size: 16px;
+}
+
+header nav
+{
+	margin-top: 50px;
+	text-align: center;
+}
+
+header nav ul li
+{
+	display: inline-block;
+
+}
+
+header nav ul li button
+{
+	width: 89px
+}
+
+#BajaAlmacen
+{
+	width: 350px;
+	margin: 0 auto;
+	display: none;
+}
